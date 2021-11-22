@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>Calculateur de Notes</title>
+    <link href="node_modules/bulma/css/bulma.min.css" rel="stylesheet">
+</head>
+<body>
+
+<nav aria-label="main navigation" class="navbar is-light" role="navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item" href="https://bulma.io">
+            <img height="28" src="https://bulma.io/images/bulma-logo.png" width="112">
+        </a>
+
+        <a aria-expanded="false" aria-label="menu" class="navbar-burger" data-target="navbarBasicExample" role="button">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+
+    <div class="navbar-menu" id="navbarBasicExample">
+        <div class="navbar-start">
+            <a class="navbar-item">
+                Credits
+            </a>
+        </div>
+
+        <div class="navbar-end">
+            <div class="navbar-item">
+                <div class="buttons">
+                    <a class="button is-dark">
+                        <strong>Random</strong>
+                    </a>
+                    <a class="button is-primary">
+                        <strong>Recalculer toute les notes</strong>
+                    </a>
+                    <a class="button is-danger">
+                        Réinitialiser les valeurs
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<section class="hero is-info">
+    <div class="hero-body">
+        <p class="title">
+            Calculculateur de CFC
+        </p>
+        <p class="subtitle">
+            Vais-je réussir mon CFC ?
+        </p>
+    </div>
+</section>
+
+
+<section class="container is-fluid my-5">
+    <div class="notification is-success">
+        <section class="level">
+            <div class="level-item has-text-centered">
+                <div>
+                    <p class="heading">Moyenne compétences de base</p>
+                    <p class="title is-1">6</p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered">
+                <div>
+                    <p class="heading">Moyenne ECG</p>
+                    <p class="title is-1">6</p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered">
+                <div>
+                    <p class="heading">Moyenne compétences pro</p>
+                    <p class="title is-1">6</p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered">
+                <div>
+                    <p class="heading">Moyenne finale</p>
+                    <p class="title is-1">6</p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered">
+                <div>
+                    <p class="heading">Ais-je réussi ?</p>
+                    <p class="title is-1">&#128525</p>
+                </div>
+            </div>
+        </section>
+    </div>
+</section>
+
+
+<section class="container is-fluid">
+    <div class="notification is-info">
+        <div class="columns">
+            <div class="column">
+                <div class="field">
+                    <label for="weight_epro" class="label">Pondération eProf</label>
+                    <div class="control">
+                        <input id="weight_epro" class="input is-large" placeholder="Pond Epro" type="number" value="80">
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="field">
+                    <label for="weight_cie" class="label">Pondération CIE</label>
+                    <div class="control">
+                        <input id="weight_cie" class="input is-large" placeholder="Pond CIE" type="number" value="20">
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="field">
+                    <label for="weight_conn_general" class="label">Pondération connaissances gén.</label>
+                    <div class="control">
+                        <input id="weight_conn_general" class="input is-large" placeholder="Pond gen" type="number" value="10">
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="field">
+                    <label for="weight_ecg" class="label">Pondération ECG</label>
+                    <div class="control">
+                        <input id="weight_ecg" class="input is-large" placeholder="Pond ECG" type="number" value="20">
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="field">
+                    <label for="weight_comp_prof" class="label">Pondération compétences Prof.</label>
+                    <div class="control">
+                        <input id="weight_comp_prof" class="input is-large" placeholder="Pond Comp Prof" type="number" value="30">
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="field">
+                    <label for="weight_tpi" class="label">Pondération TPI</label>
+                    <div class="control">
+                        <input id="weight_tpi" class="input is-large" placeholder="Pond TPI" type="number" value="40">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container is-fluid my-5">
+    <div class="notification is-info">
+        <div class="columns">
+            <div class="column">
+                <h4 class="title is-4">Maths</h4>
+                <input id="grade_math_1" class="input is-large mb-2" placeholder="Maths 1" type="number">
+                <input id="grade_math_2" class="input is-large mb-2" placeholder="Maths 2" type="number">
+                <input id="grade_math_3" class="input is-large" placeholder="Maths 3" type="number">
+            </div>
+            <div class="column">
+                <h4 class="title is-4">Anglais</h4>
+                <input id="grade_ang_1" class="input is-large mb-2" placeholder="Anglais 1" type="number">
+                <input id="grade_ang_2" class="input is-large mb-2" placeholder="Anglais 2" type="number">
+                <input id="grade_ang_3" class="input is-large mb-2" placeholder="Anglais 3" type="number">
+                <input id="grade_ang_4" class="input is-large mb-2" placeholder="Anglais 4" type="number">
+                <input id="grade_ang_5" class="input is-large" placeholder="Anglais 5" type="number">
+            </div>
+            <div class="column">
+                <h4 class="title is-4">ECG</h4>
+                <input id="grade_ecg_1" class="input is-large mb-2" placeholder="ECG 1" type="number">
+                <input id="grade_ecg_2" class="input is-large mb-2" placeholder="ECG 2" type="number">
+                <input id="grade_ecg_3" class="input is-large mb-2" placeholder="ECG 3" type="number">
+                <input id="grade_ecg_4" class="input is-large mb-2" placeholder="ECG 4" type="number">
+                <input id="grade_ecg_5" class="input is-large mb-2" placeholder="ECG 5" type="number">
+                <input id="grade_ecg_6" class="input is-large mb-2" placeholder="ECG 6" type="number">
+                <input id="grade_ecg_7" class="input is-large mb-2" placeholder="ECG 7" type="number">
+                <input id="grade_ecg_8" class="input is-large" placeholder="ECG 8" type="number">
+            </div>
+            <div class="column">
+                <h4 class="title is-4">TPI</h4>
+                <input id="grade_tpi" class="input is-large" placeholder="Note TPI" type="number">
+                <h4 class="title is-4 mt-5">Modules e pro</h4>
+                <input id="grade_modules_epro" class="input is-large" placeholder="Notes e pro" type="number">
+                <h4 class="title is-4 mt-5">Modules CIE</h4>
+                <input id="grade_modules_cie" class="input is-large" placeholder="Notes CIE" type="number">
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="js/app.js"></script>
+
+</body>
+</html>
