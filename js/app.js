@@ -36,7 +36,7 @@ function calculateAverages() {
     // ECG average 0.5
     // Modules average 0.1
     // Global average 0.1
-    grades.mathEnglishAverage = round(averageWithWeights([
+    grades.mathEnglishAverage = parseFloat(round(averageWithWeights([
         grades.math_1,
         grades.math_2,
         grades.math_3,
@@ -45,7 +45,8 @@ function calculateAverages() {
         grades.ang_3,
         grades.ang_4,
         grades.ang_5,
-    ]), 0.5).toFixed(1)
+    ]), 0.5).toFixed(1))
+
     grades.ecgAverage = round(averageWithWeights([
         grades.ecg_1,
         grades.ecg_2,
@@ -56,6 +57,7 @@ function calculateAverages() {
         grades.ecg_7,
         grades.ecg_8,
     ]), 0.5).toFixed(1)
+
     grades.proAverage = round(averageWithWeights([
         grades.modules_epro,
         grades.modules_cie,
@@ -63,6 +65,7 @@ function calculateAverages() {
         grades.weight_epro,
         grades.weight_cie
     ]), 0.1).toFixed(1)
+
     grades.generalAverage = round(averageWithWeights([
         grades.tpi,
         grades.mathEnglishAverage,
@@ -79,10 +82,10 @@ function calculateAverages() {
 }
 
 function displayAverages() {
-    document.getElementById('avg_conn_general').innerText = grades.mathEnglishAverage
-    document.getElementById('avg_ecg').innerText = grades.ecgAverage
-    document.getElementById('avg_comp_pro').innerText = grades.proAverage
-    document.getElementById('avg_general').innerText = grades.generalAverage
+    document.getElementById('avg_conn_general').innerText = isNaN(grades.mathEnglishAverage) ? '?' : grades.mathEnglishAverage
+    document.getElementById('avg_ecg').innerText = isNaN(grades.ecgAverage) ? '?' : grades.ecgAverage
+    document.getElementById('avg_comp_pro').innerText = isNaN(grades.proAverage) ? '?' : grades.proAverage
+    document.getElementById('avg_general').innerText = isNaN(grades.generalAverage) ? '?' : grades.mathEnglishAverage
     if (grades.generalAverage >= 4) {
         document.getElementById('graduation_hint').innerHTML = '&#128525'
         document.getElementById('graduation_background_color').classList.replace('is-danger', 'is-success')
@@ -104,19 +107,27 @@ function averageWithWeights(grades, weights = null) {
 
     for (let i = 0; i < grades.length; i++) {
 
-        if(weights === null || grades.length !== weights.length) {
-            weightedGradesTotal += grades[i]
-            totalWeights += 1
-        } else {
-            weightedGradesTotal += grades[i] * weights[i]
-            totalWeights += weights[i]
+        if (!isNaN(grades[i])) {
+            if(weights === null || grades.length !== weights.length) {
+                weightedGradesTotal += grades[i]
+                totalWeights += 1
+            } else {
+                weightedGradesTotal += grades[i] * weights[i]
+                totalWeights += weights[i]
+            }
         }
 
     }
 
-    return weightedGradesTotal / totalWeights
+    let average = weightedGradesTotal / totalWeights
+
+    if (isNaN(average)) {
+        return NaN
+    } else {
+        return average
+    }
 }
 
 function round(value, multiple) {
-    return Math.round(value/multiple) * multiple
+    return isNaN(value) ? NaN : Math.round(value/multiple) * multiple
 }
