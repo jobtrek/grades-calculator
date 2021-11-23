@@ -59,15 +59,15 @@ function calculateAverages() {
     ]), 0.5).toFixed(1)
 
     grades.proAverage = round(averageWithWeights([
-        grades.modules_epro,
-        grades.modules_cie,
+        grades.mod_epro,
+        grades.mod_cie,
     ],[
         grades.weight_epro,
         grades.weight_cie
     ]), 0.1).toFixed(1)
 
     grades.generalAverage = round(averageWithWeights([
-        grades.tpi,
+        grades.mod_tpi,
         grades.mathEnglishAverage,
         grades.ecgAverage,
         grades.proAverage,
@@ -85,7 +85,7 @@ function displayAverages() {
     document.getElementById('avg_conn_general').innerText = isNaN(grades.mathEnglishAverage) ? '?' : grades.mathEnglishAverage
     document.getElementById('avg_ecg').innerText = isNaN(grades.ecgAverage) ? '?' : grades.ecgAverage
     document.getElementById('avg_comp_pro').innerText = isNaN(grades.proAverage) ? '?' : grades.proAverage
-    document.getElementById('avg_general').innerText = isNaN(grades.generalAverage) ? '?' : grades.mathEnglishAverage
+    document.getElementById('avg_general').innerText = isNaN(grades.generalAverage) ? '?' : grades.generalAverage
     if (grades.generalAverage >= 4) {
         document.getElementById('graduation_hint').innerHTML = '&#128525'
         document.getElementById('graduation_background_color').classList.replace('is-danger', 'is-success')
