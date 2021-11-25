@@ -1,5 +1,7 @@
 export class Average {
 
+    /** @type {HTMLElement} **/
+    el;
     /**
      *
      * @param {HTMLElement} el
@@ -15,20 +17,18 @@ export class Average {
         this.computedAverage = this.round(this.average(this.grades), 0.5)
     }
 
+    /**
+     * Calculates the average or weighted average of the array provided
+     * @param {(Grade | Average)[]} grades
+     * @returns {number}
+     */
     average(grades) {
-        console.log("Grades for avg : ", grades)
-        let sums = grades.filter(g => !isNaN(g.getValue())).reduce((acc, g) => {
-            console.log(acc)
-            console.log(g)
-            console.log(g.getValue())
-            console.log(g.getWeight())
-            return {
+        let sums = grades
+            .filter(g => !isNaN(g.getValue()))
+            .reduce((acc, g) => ({
                 sum: acc.sum + (g.getValue() * g.getWeight()),
                 div: acc.div + g.getWeight()
-            }
-        
-        }, {sum: 0, div: 0})
-        console.log(sums.sum / sums.div)
+            }), {sum: 0, div: 0})
         return sums.sum / sums.div
     }
 
@@ -89,7 +89,7 @@ export class Average {
     }
 
     getWeight() {
-        return document.getElementById(this.el.dataset.gradeWeightId).value ?? 1
+        return document.getElementById(this.el.dataset.gradeWeightId) ? parseFloat(document.getElementById(this.el.dataset.gradeWeightId).value) : 1
     }
 
     getValue() {

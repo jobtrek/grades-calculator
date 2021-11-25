@@ -1,5 +1,8 @@
 export class Grade {
 
+    /** @type {HTMLInputElement} **/
+    el;
+
     /**
      *
      * @param {HTMLInputElement} el

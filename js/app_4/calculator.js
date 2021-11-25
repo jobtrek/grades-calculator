@@ -3,11 +3,16 @@ import {Grade} from "./grade";
 
 export class Calculator {
 
+    /** @type {Grade[]} **/
+    grades;
+    /** @type {Average[]} **/
+    averages;
+
     /**
      * Create a new grades calculator
      * Indicate to the calculator on witch elements he needs to be attached
      * @param {HTMLInputElement[]} inputs
-     * @param {HTMLElement[]} averages
+     * @param {Element[]} averages
      */
     constructor(inputs, averages) {
         // Prepare each averages and grades
@@ -31,6 +36,9 @@ export class Calculator {
         this.grades.forEach(g => g.el.addEventListener('change', () => this.calculateAverages()))
     }
 
+    /**
+     * Launch the average computation
+     */
     calculateAverages() {
         this.averages.forEach(a => {
             a.calculate()
