@@ -11,10 +11,12 @@
 <nav aria-label="main navigation" class="navbar is-light" role="navigation">
     <div class="navbar-brand">
         <a class="navbar-item" href="https://bulma.io">
-            <img height="28" src="https://bulma.io/images/bulma-logo.png" width="112">
+            <img height="28" src="https://bulma.io/images/bulma-logo.png"
+                 width="112">
         </a>
 
-        <a aria-expanded="false" aria-label="menu" class="navbar-burger" data-target="navbarBasicExample" role="button">
+        <a aria-expanded="false" aria-label="menu" class="navbar-burger"
+           data-target="navbarBasicExample" role="button">
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
@@ -64,25 +66,37 @@
             <div class="level-item has-text-centered">
                 <div>
                     <p class="heading">Moyenne conn. générales</p>
-                    <p id="avg_conn_general" class="title is-1">6</p>
+                    <p id="avg_conn_general"
+                       data-average-source="general_skills"
+                       data-grade-average-group="final"
+                       data-grade-weight-id="weight_conn_general"
+                       class="title is-1">6</p>
                 </div>
             </div>
             <div class="level-item has-text-centered">
                 <div>
                     <p class="heading">Moyenne ECG</p>
-                    <p id="avg_ecg" class="title is-1">6</p>
+                    <p id="avg_ecg" data-average-source="ecg"
+                       data-grade-average-group="final"
+                       data-grade-weight-id="weight_ecg" class="title is-1">
+                        6</p>
                 </div>
             </div>
             <div class="level-item has-text-centered">
                 <div>
                     <p class="heading">Moyenne compétences pro</p>
-                    <p id="avg_comp_pro" class="title is-1">6</p>
+                    <p id="avg_comp_pro"
+                       data-average-source="professional_skills"
+                       data-grade-average-group="final"
+                       data-grade-weight-id="weight_comp_prof"
+                       class="title is-1">6</p>
                 </div>
             </div>
             <div class="level-item has-text-centered">
                 <div>
                     <p class="heading">Moyenne finale</p>
-                    <p id="avg_general" class="title is-1">6</p>
+                    <p id="avg_general" data-average-source="final"
+                       class="title is-1">6</p>
                 </div>
             </div>
             <div class="level-item has-text-centered">
@@ -101,49 +115,69 @@
         <div class="columns" id="weights">
             <div class="column">
                 <div class="field">
-                    <label for="weight_epro" class="label">Pondération eProf</label>
+                    <label for="weight_epro" class="label">Pondération
+                                                           eProf</label>
                     <div class="control">
-                        <input id="weight_epro" class="input is-large" placeholder="Pond Epro" type="number" step="1" value="80">
+                        <input id="weight_epro" class="input is-large"
+                               placeholder="Pond Epro" type="number" step="1"
+                               value="80">
                     </div>
                 </div>
             </div>
             <div class="column">
                 <div class="field">
-                    <label for="weight_cie" class="label">Pondération CIE</label>
+                    <label for="weight_cie" class="label">Pondération
+                                                          CIE</label>
                     <div class="control">
-                        <input id="weight_cie" class="input is-large" placeholder="Pond CIE" type="number" step="1" value="20">
+                        <input id="weight_cie" class="input is-large"
+                               placeholder="Pond CIE" type="number" step="1"
+                               value="20">
                     </div>
                 </div>
             </div>
             <div class="column">
                 <div class="field">
-                    <label for="weight_conn_general" class="label">Pondération connaissances gén.</label>
+                    <label for="weight_conn_general" class="label">Pondération
+                                                                   connaissances
+                                                                   gén.</label>
                     <div class="control">
-                        <input id="weight_conn_general" class="input is-large" placeholder="Pond gen" type="number" step="1" value="10">
+                        <input id="weight_conn_general" class="input is-large"
+                               placeholder="Pond gen" type="number" step="1"
+                               value="10">
                     </div>
                 </div>
             </div>
             <div class="column">
                 <div class="field">
-                    <label for="weight_ecg" class="label">Pondération ECG</label>
+                    <label for="weight_ecg" class="label">Pondération
+                                                          ECG</label>
                     <div class="control">
-                        <input id="weight_ecg" class="input is-large" placeholder="Pond ECG" type="number" step="1" value="20">
+                        <input id="weight_ecg" class="input is-large"
+                               placeholder="Pond ECG" type="number" step="1"
+                               value="20">
                     </div>
                 </div>
             </div>
             <div class="column">
                 <div class="field">
-                    <label for="weight_comp_prof" class="label">Pondération compétences Prof.</label>
+                    <label for="weight_comp_prof" class="label">Pondération
+                                                                compétences
+                                                                Prof.</label>
                     <div class="control">
-                        <input id="weight_comp_prof" class="input is-large" placeholder="Pond Comp Prof" type="number" step="1" value="30">
+                        <input id="weight_comp_prof" class="input is-large"
+                               placeholder="Pond Comp Prof" type="number"
+                               step="1" value="30">
                     </div>
                 </div>
             </div>
             <div class="column">
                 <div class="field">
-                    <label for="weight_tpi" class="label">Pondération TPI</label>
+                    <label for="weight_tpi" class="label">Pondération
+                                                          TPI</label>
                     <div class="control">
-                        <input id="weight_tpi" class="input is-large" placeholder="Pond TPI" type="number" step="1" value="40">
+                        <input id="weight_tpi" class="input is-large"
+                               placeholder="Pond TPI" type="number" step="1"
+                               value="40">
                     </div>
                 </div>
             </div>
@@ -156,36 +190,95 @@
         <div class="columns">
             <div class="column" id="math_grades">
                 <h4 class="title is-4">Maths</h4>
-                <input id="math_1" class="input is-large mb-2" placeholder="Maths 1" type="number" step="0.1" min="1" max="6">
-                <input id="math_2" class="input is-large mb-2" placeholder="Maths 2" type="number" step="0.1" min="1" max="6">
-                <input id="math_3" class="input is-large" placeholder="Maths 3" type="number" step="0.1" value="5" min="1" max="6">
+                <input id="math_1" class="input is-large mb-2"
+                       placeholder="Maths 1" type="number" step="0.1" min="1"
+                       max="6" data-grade-name="math_1"
+                       data-grade-average-group="general_skills">
+                <input id="math_2" class="input is-large mb-2"
+                       placeholder="Maths 2" type="number" step="0.1" min="1"
+                       max="6" data-grade-name="math_2"
+                       data-grade-average-group="general_skills">
+                <input id="math_3" class="input is-large" placeholder="Maths 3"
+                       type="number" step="0.1" value="5" min="1" max="6"
+                       data-grade-name="math_2"
+                       data-grade-average-group="general_skills">
             </div>
             <div class="column" id="eng_grades">
                 <h4 class="title is-4">Anglais</h4>
-                <input id="ang_1" class="input is-large mb-2" placeholder="Anglais 1" type="number" step="0.1" value="5" min="1" max="6">
-                <input id="ang_2" class="input is-large mb-2" placeholder="Anglais 2" type="number" step="0.1" value="5" min="1" max="6">
-                <input id="ang_3" class="input is-large mb-2" placeholder="Anglais 3" type="number" step="0.1" value="5" min="1" max="6">
-                <input id="ang_4" class="input is-large mb-2" placeholder="Anglais 4" type="number" step="0.1" value="5" min="1" max="6">
-                <input id="ang_5" class="input is-large" placeholder="Anglais 5" type="number" step="0.1" value="5" min="1" max="6">
+                <input id="ang_1" class="input is-large mb-2"
+                       placeholder="Anglais 1" type="number" step="0.1"
+                       value="5" min="1" max="6" data-grade-name="ang_1"
+                       data-grade-average-group="general_skills">
+                <input id="ang_2" class="input is-large mb-2"
+                       placeholder="Anglais 2" type="number" step="0.1"
+                       value="5" min="1" max="6" data-grade-name="ang_2"
+                       data-grade-average-group="general_skills">
+                <input id="ang_3" class="input is-large mb-2"
+                       placeholder="Anglais 3" type="number" step="0.1"
+                       value="5" min="1" max="6" data-grade-name="ang_3"
+                       data-grade-average-group="general_skills">
+                <input id="ang_4" class="input is-large mb-2"
+                       placeholder="Anglais 4" type="number" step="0.1"
+                       value="5" min="1" max="6" data-grade-name="ang_4"
+                       data-grade-average-group="general_skills">
+                <input id="ang_5" class="input is-large" placeholder="Anglais 5"
+                       type="number" step="0.1" value="5" min="1" max="6"
+                       data-grade-name="ang_5"
+                       data-grade-average-group="general_skills">
             </div>
             <div class="column" id="ecg_grades">
                 <h4 class="title is-4">ECG</h4>
-                <input id="ecg_1" class="input is-large mb-2" placeholder="ECG 1" type="number" step="0.1" value="5" min="1" max="6">
-                <input id="ecg_2" class="input is-large mb-2" placeholder="ECG 2" type="number" step="0.1" value="5" min="1" max="6">
-                <input id="ecg_3" class="input is-large mb-2" placeholder="ECG 3" type="number" step="0.1" value="5" min="1" max="6">
-                <input id="ecg_4" class="input is-large mb-2" placeholder="ECG 4" type="number" step="0.1" value="5" min="1" max="6">
-                <input id="ecg_5" class="input is-large mb-2" placeholder="ECG 5" type="number" step="0.1" value="5" min="1" max="6">
-                <input id="ecg_6" class="input is-large mb-2" placeholder="ECG 6" type="number" step="0.1" value="5" min="1" max="6">
-                <input id="ecg_7" class="input is-large mb-2" placeholder="ECG 7" type="number" step="0.1" value="5" min="1" max="6">
-                <input id="ecg_8" class="input is-large" placeholder="ECG 8" type="number" step="0.1" value="5" min="1" max="6">
+                <input id="ecg_1" class="input is-large mb-2"
+                       placeholder="ECG 1" type="number" step="0.1" value="5"
+                       min="1" max="6" data-grade-name="ecg_1"
+                       data-grade-average-group="ecg">
+                <input id="ecg_2" class="input is-large mb-2"
+                       placeholder="ECG 2" type="number" step="0.1" value="5"
+                       min="1" max="6" data-grade-name="ecg_2"
+                       data-grade-average-group="ecg">
+                <input id="ecg_3" class="input is-large mb-2"
+                       placeholder="ECG 3" type="number" step="0.1" value="5"
+                       min="1" max="6" data-grade-name="ecg_3"
+                       data-grade-average-group="ecg">
+                <input id="ecg_4" class="input is-large mb-2"
+                       placeholder="ECG 4" type="number" step="0.1" value="5"
+                       min="1" max="6" data-grade-name="ecg_4"
+                       data-grade-average-group="ecg">
+                <input id="ecg_5" class="input is-large mb-2"
+                       placeholder="ECG 5" type="number" step="0.1" value="5"
+                       min="1" max="6" data-grade-name="ecg_5"
+                       data-grade-average-group="ecg">
+                <input id="ecg_6" class="input is-large mb-2"
+                       placeholder="ECG 6" type="number" step="0.1" value="5"
+                       min="1" max="6" data-grade-name="ecg_6"
+                       data-grade-average-group="ecg">
+                <input id="ecg_7" class="input is-large mb-2"
+                       placeholder="ECG 7" type="number" step="0.1" value="5"
+                       min="1" max="6" data-grade-name="ecg_7"
+                       data-grade-average-group="ecg">
+                <input id="ecg_8" class="input is-large" placeholder="ECG 8"
+                       type="number" step="0.1" value="5" min="1" max="6"
+                       data-grade-name="ecg_8" data-grade-average-group="ecg">
             </div>
             <div class="column" id="general_grades">
                 <h4 class="title is-4">TPI</h4>
-                <input id="mod_tpi" class="input is-large" placeholder="Note TPI" type="number"  step="0.1" value="5" min="1" max="6">
+                <input id="mod_tpi" class="input is-large"
+                       placeholder="Note TPI" type="number" step="0.1" value="5"
+                       min="1" max="6" data-grade-name="tpi"
+                       data-grade-average-group="final"
+                       data-grade-weight-id="weight_tpi">
                 <h4 class="title is-4 mt-5">Modules e pro</h4>
-                <input id="mod_epro" class="input is-large" placeholder="Notes e pro" type="number"  step="0.1" value="5" min="1" max="6">
+                <input id="mod_epro" class="input is-large"
+                       placeholder="Notes e pro" type="number" step="0.1"
+                       value="5" min="1" max="6" data-grade-name="mod_epro"
+                       data-grade-average-group="professional_skills"
+                       data-grade-weight-id="weight_epro">
                 <h4 class="title is-4 mt-5">Modules CIE</h4>
-                <input id="mod_cie" class="input is-large" placeholder="Notes CIE" type="number" step="0.1" value="5" min="1" max="6">
+                <input id="mod_cie" class="input is-large"
+                       placeholder="Notes CIE" type="number" step="0.1"
+                       value="5" min="1" max="6" data-grade-name="mod_cie"
+                       data-grade-average-group="professional_skills"
+                       data-grade-weight-id="weight_cie">
             </div>
         </div>
     </div>
