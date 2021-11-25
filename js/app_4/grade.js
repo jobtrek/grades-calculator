@@ -1,4 +1,4 @@
-class Grade {
+export class Grade {
 
     /**
      *
@@ -27,11 +27,11 @@ class Grade {
     }
 
     getWeight() {
-        return document.getElementById(this.el.dataset.gradeWeightId).value ?? 1
+        return document.getElementById(this.el.dataset.gradeWeightId) ? parseFloat(document.getElementById(this.el.dataset.gradeWeightId).value) : 1
     }
 
     getValue() {
-        return this.el.value
+        return parseFloat(this.el.value)
     }
 
     setValue(grade) {
