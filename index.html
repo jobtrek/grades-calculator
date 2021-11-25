@@ -98,7 +98,7 @@
 
 <section class="container is-fluid">
     <div class="notification is-info">
-        <div class="columns">
+        <div class="columns" id="weights">
             <div class="column">
                 <div class="field">
                     <label for="weight_epro" class="label">Pondération eProf</label>
@@ -154,13 +154,13 @@
 <section class="container is-fluid my-5">
     <div class="notification is-info">
         <div class="columns">
-            <div class="column" data-avg="math_eng">
+            <div class="column" id="math_grades">
                 <h4 class="title is-4">Maths</h4>
                 <input id="math_1" class="input is-large mb-2" placeholder="Maths 1" type="number" step="0.1" min="1" max="6">
                 <input id="math_2" class="input is-large mb-2" placeholder="Maths 2" type="number" step="0.1" min="1" max="6">
                 <input id="math_3" class="input is-large" placeholder="Maths 3" type="number" step="0.1" value="5" min="1" max="6">
             </div>
-            <div class="column" data-avg="math_eng">
+            <div class="column" id="eng_grades">
                 <h4 class="title is-4">Anglais</h4>
                 <input id="ang_1" class="input is-large mb-2" placeholder="Anglais 1" type="number" step="0.1" value="5" min="1" max="6">
                 <input id="ang_2" class="input is-large mb-2" placeholder="Anglais 2" type="number" step="0.1" value="5" min="1" max="6">
@@ -168,7 +168,7 @@
                 <input id="ang_4" class="input is-large mb-2" placeholder="Anglais 4" type="number" step="0.1" value="5" min="1" max="6">
                 <input id="ang_5" class="input is-large" placeholder="Anglais 5" type="number" step="0.1" value="5" min="1" max="6">
             </div>
-            <div class="column" data-avg="ecg">
+            <div class="column" id="ecg_grades">
                 <h4 class="title is-4">ECG</h4>
                 <input id="ecg_1" class="input is-large mb-2" placeholder="ECG 1" type="number" step="0.1" value="5" min="1" max="6">
                 <input id="ecg_2" class="input is-large mb-2" placeholder="ECG 2" type="number" step="0.1" value="5" min="1" max="6">
@@ -179,7 +179,7 @@
                 <input id="ecg_7" class="input is-large mb-2" placeholder="ECG 7" type="number" step="0.1" value="5" min="1" max="6">
                 <input id="ecg_8" class="input is-large" placeholder="ECG 8" type="number" step="0.1" value="5" min="1" max="6">
             </div>
-            <div class="column" data-avg="general">
+            <div class="column" id="general_grades">
                 <h4 class="title is-4">TPI</h4>
                 <input id="mod_tpi" class="input is-large" placeholder="Note TPI" type="number"  step="0.1" value="5" min="1" max="6">
                 <h4 class="title is-4 mt-5">Modules e pro</h4>
@@ -191,7 +191,7 @@
     </div>
 </section>
 
-<script src="js/app_2.js"></script>
+<script src="js/app_3.js"></script>
 
 </body>
 </html>
