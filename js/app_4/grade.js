@@ -1,43 +1,37 @@
 export class Grade {
+  /**
+   *
+   * @param {HTMLInputElement} el
+   */
+  constructor (el) {
+    this.el = el
+  }
 
-    /** @type {HTMLInputElement} **/
-    el;
+  getName () {
+    return this.el.dataset.gradeName
+  }
 
-    /**
-     *
-     * @param {HTMLInputElement} el
-     */
-    constructor(el) {
+  setName (name) {
+    this.el.dataset.gradeName = name
+  }
 
-        this.el = el
+  getAverageGroup () {
+    return this.el.dataset.gradeAverageGroup
+  }
 
-    }
+  setAverageGroup (name) {
+    this.el.dataset.gradeAverageGroup = name
+  }
 
-    getName() {
-        return this.el.dataset.gradeName
-    }
+  getWeight () {
+    return document.getElementById(this.el.dataset.gradeWeightId) ? parseFloat(document.getElementById(this.el.dataset.gradeWeightId).value) : 1
+  }
 
-    setName(name) {
-        this.el.dataset.gradeName = name
-    }
+  getValue () {
+    return parseFloat(this.el.value)
+  }
 
-    getAverageGroup() {
-        return this.el.dataset.gradeAverageGroup
-    }
-
-    setAverageGroup(name) {
-        this.el.dataset.gradeAverageGroup = name
-    }
-
-    getWeight() {
-        return document.getElementById(this.el.dataset.gradeWeightId) ? parseFloat(document.getElementById(this.el.dataset.gradeWeightId).value) : 1
-    }
-
-    getValue() {
-        return parseFloat(this.el.value)
-    }
-
-    setValue(grade) {
-        this.el.value = grade
-    }
+  setValue (grade) {
+    this.el.value = grade
+  }
 }
