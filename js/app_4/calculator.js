@@ -1,5 +1,6 @@
 import { Average } from './average'
 import { Grade } from './grade'
+import { Storage} from './storage'
 
 export class Calculator {
   /**
@@ -14,12 +15,14 @@ export class Calculator {
     this.averages = averages.map(e => new Average(e))
     // Set the source grades for each average calculation
     this.averages.forEach(a => a.setGrades([...this.grades, ...this.averages]))
+    this.storage = new Storage(this.grades, 'grades-calculator')
   }
 
   /**
    * Perform a first calculation with all available grades
    */
   initialize () {
+    this.storage.loadGrades()
     this.calculateAverages()
   }
 
@@ -38,5 +41,6 @@ export class Calculator {
       a.calculate()
       a.display()
     })
+    this.storage.saveGrades()
   }
 }

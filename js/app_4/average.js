@@ -58,7 +58,7 @@ export class Average {
    * Display the current average value in the provided html element
    */
   display () {
-    this.el.innerText = this.computedAverage
+    this.el.innerText = isNaN(this.computedAverage) ? '' : this.computedAverage
   }
 
   getName () {
