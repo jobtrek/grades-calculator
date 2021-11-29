@@ -1,10 +1,7 @@
 import { Average } from './average'
 import { Grade } from './grade'
 import { Storage } from './storage'
-import { AppControl } from './control'
-import { Random } from "./random";
-import { Recompute } from "./recompute";
-import { Reset } from "./reset";
+import { appControlFactory } from './appControlFactory'
 
 export class Calculator {
   /**
@@ -12,9 +9,9 @@ export class Calculator {
    * Indicate to the calculator on witch elements he needs to be attached
    * @param {HTMLInputElement[]} inputs
    * @param {Element[]} averages
-   * @param {HTMLButtonElement[]} controls
+   * @param {HTMLButtonElement[]} buttons
    */
-  constructor (inputs, averages, controls) {
+  constructor (inputs, averages, buttons) {
     // Prepare each averages and grades
     this.grades = inputs.map(e => new Grade(e))
     this.averages = averages.map(e => new Average(e))
@@ -22,7 +19,8 @@ export class Calculator {
     this.averages.forEach(a => a.setGrades([...this.grades, ...this.averages]))
     this.storage = new Storage(this.grades, 'grades-calculator')
     // Initialise controls
-    this.controls = controls.map(c => console.log(c))
+    this.controls = buttons.map(c => appControlFactory(c, this))
+    console.log(this.controls)
   }
 
   /**

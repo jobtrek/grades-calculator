@@ -1,22 +1,9 @@
-import { Random } from './random'
-import { Recompute } from './recompute'
-import { Reset } from './reset'
-
-
-// TODO: resolve bug with class declaration
-
 export class AppControl {
-  constructor (el) {
+  constructor (el, calculator) {
     this.el = el
-  }
+    this.calculator = calculator
 
-  static factory (el) {
-    console.log('Factory call !')
-    const factories = {
-      random: Random,
-      recompute: Recompute,
-      reset: Reset
-    }
-    return new factories[el.dataset.buttonType](el)
+    // Register an event that will call the supercharged click method of the child classes
+    this.el.addEventListener('click', () => { this.click() })
   }
 }
