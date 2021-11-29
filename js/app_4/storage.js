@@ -14,9 +14,12 @@ export class Storage {
 
   loadGrades () {
     const retrievedGrades = localStorage.getItem(this.key)
-    for (const grade of this.grades) {
-      if (retrievedGrades[grade.getName()]) {
-        grade.setValue(retrievedGrades[grade.getName()])
+
+    if (retrievedGrades) {
+      for (const grade of this.grades) {
+        if (retrievedGrades[grade.getName()]) {
+          grade.setValue(retrievedGrades[grade.getName()])
+        }
       }
     }
   }
@@ -27,12 +30,9 @@ export class Storage {
 
   serialiseGrades () {
     const gradesObj = {}
-
     for (const grade of this.grades) {
-      console.log(grade)
       gradesObj[grade.getName()] = grade.getValue()
     }
-    console.log(gradesObj)
     return gradesObj
   }
 }

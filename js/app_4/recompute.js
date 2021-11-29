@@ -1,5 +1,5 @@
-import { Control } from './control'
+import { AppControl } from './control'
 
-export class Recompute extends Control {
-  //
+export class Recompute extends AppControl {
+  constructor () {super()}
 }

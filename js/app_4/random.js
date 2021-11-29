@@ -1,5 +1,5 @@
-import { Control } from './control'
+import { AppControl } from './control'
 
-export class Random extends Control {
-  //
+export class Random extends AppControl {
+  constructor () {super()}
 }

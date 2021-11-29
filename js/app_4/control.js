@@ -2,7 +2,10 @@ import { Random } from './random'
 import { Recompute } from './recompute'
 import { Reset } from './reset'
 
-export class Control {
+
+// TODO: resolve bug with class declaration
+
+export class AppControl {
   constructor (el) {
     this.el = el
   }

@@ -1,5 +1,5 @@
-import { Control } from './control'
+import { AppControl } from './control'
 
-export class Reset extends Control {
-  //
+export class Reset extends AppControl {
+  constructor () {super()}
 }

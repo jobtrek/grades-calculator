@@ -1,7 +1,10 @@
 import { Average } from './average'
 import { Grade } from './grade'
 import { Storage } from './storage'
-import { Control } from './control'
+import { AppControl } from './control'
+import { Random } from "./random";
+import { Recompute } from "./recompute";
+import { Reset } from "./reset";
 
 export class Calculator {
   /**
@@ -19,8 +22,7 @@ export class Calculator {
     this.averages.forEach(a => a.setGrades([...this.grades, ...this.averages]))
     this.storage = new Storage(this.grades, 'grades-calculator')
     // Initialise controls
-    this.controls = controls.map(c => Control.factory(c))
-    console.log(controls)
+    this.controls = controls.map(c => console.log(c))
   }
 
   /**
