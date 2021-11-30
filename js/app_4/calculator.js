@@ -20,7 +20,6 @@ export class Calculator {
     this.storage = new Storage(this.grades, 'grades-calculator')
     // Initialise controls
     this.controls = buttons.map(c => appControlFactory(c, this))
-    console.log(this.controls)
   }
 
   /**

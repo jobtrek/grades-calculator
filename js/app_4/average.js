@@ -1,3 +1,5 @@
+import { DisplayManager } from './displayManager'
+
 export class Average {
   /**
    *
@@ -5,6 +7,7 @@ export class Average {
    */
   constructor (el) {
     this.el = el
+    this.displayManager = new DisplayManager(this.el.dataset.averageDisplay)
   }
 
   /**
@@ -59,6 +62,7 @@ export class Average {
    */
   display () {
     this.el.innerText = isNaN(this.computedAverage) ? '' : this.computedAverage
+    this.displayManager.updateView(this.computedAverage)
   }
 
   getName () {
