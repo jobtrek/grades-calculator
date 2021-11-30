@@ -1,0 +1,17 @@
+{
+    "name": "bastien/calcul-notes",
+    "autoload": {
+        "psr-4": {
+            "Bastien\\CalculNotes\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Bastien",
+            "email": "bastien.nicoud@jobtrek.ch"
+        }
+    ],
+    "require": {
+        "php": "8.1"
+    }
+}

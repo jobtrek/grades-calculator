@@ -1,7 +1,6 @@
 import { Display } from './Display'
 
 export class DisplayManager {
-
   constructor (displayString) {
     this.displays = []
     if (displayString) {
