@@ -14,12 +14,19 @@
 require_once 'navigation.php';
 require_once 'hero.php';
 require_once 'averages.php';
+?>
+
+<form id="grades-form" method="POST" action="index.php">
+
+<?php
 require_once 'weights.php';
 require_once 'grades.php';
 ?>
+<button type="submit">Submit</button>
+</form>
 
 
-<!--<script src="../js/app_4/index.js" type="module"></script>-->
+<script src="assets/app.js" type="module"></script>
 
 </body>
 </html>

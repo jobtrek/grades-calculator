@@ -9,7 +9,7 @@
                     <div class="control">
                         <input class="input is-large" data-grade-name="weight_epro" id="weight_epro"
                                placeholder="Pond Epro" step="1" type="number"
-                               value="80">
+                               value="80" name="weight_epro">
                     </div>
                 </div>
             </div>
@@ -20,7 +20,7 @@
                     <div class="control">
                         <input class="input is-large" data-grade-name="weight_cie" id="weight_cie"
                                placeholder="Pond CIE" step="1" type="number"
-                               value="20">
+                               value="20" name="weight_cie">
                     </div>
                 </div>
             </div>
@@ -32,7 +32,7 @@
                     <div class="control">
                         <input class="input is-large" data-grade-name="weight_conn_general" id="weight_conn_general"
                                placeholder="Pond gen" step="1" type="number"
-                               value="10">
+                               value="10" name="weight_conn_general">
                     </div>
                 </div>
             </div>
@@ -43,7 +43,7 @@
                     <div class="control">
                         <input class="input is-large" data-grade-name="weight_ecg" id="weight_ecg"
                                placeholder="Pond ECG" step="1" type="number"
-                               value="20">
+                               value="20" name="weight_ecg">
                     </div>
                 </div>
             </div>
@@ -55,7 +55,7 @@
                     <div class="control">
                         <input class="input is-large" data-grade-name="weight_comp_prof" id="weight_comp_prof"
                                placeholder="Pond Comp Prof" step="1"
-                               type="number" value="30">
+                               type="number" value="30" name="weight_comp_prof">
                     </div>
                 </div>
             </div>
@@ -66,7 +66,7 @@
                     <div class="control">
                         <input class="input is-large" data-grade-name="weight_tpi" id="weight_tpi"
                                placeholder="Pond TPI" step="1" type="number"
-                               value="40">
+                               value="40" name="weight_tpi">
                     </div>
                 </div>
             </div>
