@@ -1,6 +1,8 @@
 <?php
 require __DIR__ . '/../vendor/autoload.php';
 
-var_dump($_POST);
+use Bastien\GradesCalculator\App;
+
+$app = new App($_POST);
 
 require_once './fragments/doctype.php';

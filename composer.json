@@ -2,7 +2,7 @@
     "name": "bastien/calcul-notes",
     "autoload": {
         "psr-4": {
-            "Bastien\\CalculNotes\\": "src/"
+            "Bastien\\GradesCalculator\\": "src/"
         }
     },
     "authors": [
@@ -13,5 +13,9 @@
     ],
     "require": {
         "php": "8.1"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.6",
+        "phpstan/phpstan": "^1.2"
     }
 }
