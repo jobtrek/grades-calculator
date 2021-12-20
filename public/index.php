@@ -1,6 +1,11 @@
 <?php
+
+use Bastien\CalculNotes\App;
+
 require __DIR__ . '/../vendor/autoload.php';
 
-var_dump($_POST);
+dump($_POST);
+
+$app = new App($_POST);
 
 require_once './fragments/doctype.php';
