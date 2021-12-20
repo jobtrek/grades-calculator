@@ -1,10 +1,7 @@
 <?php
-
-use Bastien\CalculNotes\App;
-
 require __DIR__ . '/../vendor/autoload.php';
 
-dump($_POST);
+use Bastien\GradesCalculator\App;
 
 $app = new App($_POST);
 

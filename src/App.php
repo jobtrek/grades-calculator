@@ -5,13 +5,14 @@ namespace Bastien\CalculNotes;
 class App
 {
 
-    private array $post;
+    private array $formContents;
 
-    /**
-     * @param array $post
-     */
-    public function __construct(array $post)
+    public function __construct(array $formContents)
     {
-        $this->post = $post;
+        $this->formContents = $formContents;
+    }
+
+    public function launch() {
+
     }
 }
